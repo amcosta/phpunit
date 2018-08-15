@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Test;
+namespace App\Test\Manual;
 
 use PHPUnit\Framework\TestCase;
 
@@ -20,7 +20,7 @@ class Stack1Test extends TestCase
     public function testPush(array $stack)
     {
         array_push($stack, 'foo');
-        $this->assertEquals('foo', $stack[count($stack) - 1]);
+        $this->assertEquals('foo', end($stack));
         $this->assertNotEmpty($stack);
 
         return $stack;
